@@ -7,5 +7,6 @@ function ImagingStudy(description, date, modality, URL) {
     self.Date = date;
     self.Modality = modality;
     self.URL = URL;
+    ko.track(self);
     return self;
 };

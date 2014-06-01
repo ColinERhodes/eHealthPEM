@@ -7,5 +7,7 @@ function Patient(name, dob, gender, mrn) {
     self.DateOfBirth = dob;
     self.Gender = gender;
     self.MRN = mrn;
+    ko.track(self);
+
     return self;
 };
