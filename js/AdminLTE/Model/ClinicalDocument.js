@@ -7,6 +7,7 @@ function ClinicalDocument(description, date, status, URL, isNew) {
     self.Date = date;
     self.Status = status;
     self.URL = URL;
+
     self.isNew = isNew;
     ko.track(self);
     return self;

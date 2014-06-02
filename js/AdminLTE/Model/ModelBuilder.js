@@ -35,7 +35,7 @@ function ModelBuilder(urlBase) {
        $.getJSON(baseURI + "Customers/" + customer + "/Patients/" + patient + "/Images", function(rd)  { 
         
             model.ImagingStudies = ko.utils.arrayMap(rd, function(item) {
-                return new ImagingStudy(item.Description, item.Date, item.Modality, item.URL);
+                return new ImagingStudy(item.Description, item.Date, item.Modality, item.URL, item.iPADURL);
             })
    
         })
