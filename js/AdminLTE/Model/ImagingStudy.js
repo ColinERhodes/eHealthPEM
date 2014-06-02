@@ -12,7 +12,7 @@ function ImagingStudy(description, date, modality, URL,  iPADURL) {
     self.correctedURL = ko.computed(function() {
         
         if((navigator.userAgent.match(/iPhone/i)) || 
-            (navigator.userAgent.match(/iPod/i)) ||
+            (navigator.userAgent.match(/iPad/i)) ||
             (navigator.userAgent.match(/Android/i))) {
                  return self.iPadURL;
         } else {
