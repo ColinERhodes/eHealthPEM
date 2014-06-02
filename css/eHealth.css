@@ -1,7 +1,6 @@
 #ajaxBusy {
-    height: 0px;
+    height: 400px;
     position: relative;
-    display:none;
 }
 
 .ajax-loader {

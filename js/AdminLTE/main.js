@@ -8,18 +8,20 @@ var builder = new ModelBuilder(baseURI);
 var theViewModel  = new ViewModel();
 
 // Setup periodic call backs.
-function refreshUI() { 
-    builder.BuildUsingSearch(theViewModel, "Demo", "Rhodes", "user");
-    setTimeout(refreshUI, 30 * 1000);
+function refreshUI(sync) { 
+    builder.BuildUsingSearch(theViewModel, "Demo", "Rhodes", "user", sync);
+    setTimeout(function() { refreshUI(sync)} , 2 * 60 * 1000);
 };
 
  // Document ready ...
 $(document).ready(function() {
-     
+         
+    $('#ajaxBusy').show();
+         
     ko.track(theViewModel);
     ko.applyBindings(theViewModel);
 
-    refreshUI();
+    refreshUI(false);
 
     var dtOptions = {
                     "bPaginate": false,

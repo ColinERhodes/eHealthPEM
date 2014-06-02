@@ -136,11 +136,11 @@
                 <section class="content-header">
                     <h1>
                         <i class="glyphicon glyphicon-user" ></i> 
-                        <span data-bind="text: Patient.Name">Not bound</span>
+                        <span data-bind="text: Patient.Name"></span>
                         <!--<small><a href="#">edit</a></small>-->
-                        <span class="patient-header-details" data-bind="text: Patient.DateOfBirth"><strong>DOB:</strong > Not bound</span>
-                        <span class="patient-header-details" data-bind="text: Patient.Gender"><strong>Gender:</strong > Not bound</span>
-                        <span class="patient-header-details" data-bind="text: Patient.MRN"><strong>MRN:</strong > Not bound</span>
+                        <span class="patient-header-details" data-bind="text: Patient.DateOfBirth"><strong>DOB:</strong > </span>
+                        <span class="patient-header-details" data-bind="text: Patient.Gender"><strong>Gender:</strong > </span>
+                        <span class="patient-header-details" data-bind="text: Patient.MRN"><strong>MRN:</strong > </span>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -179,11 +179,11 @@
                                                 <tr>
                                                     <td>
                                                         <a href="notbound"
-                                                            data-bind="text: Description, attr: {href: URL}">Unbound</a> 
+                                                            data-bind="text: Description, attr: {href: URL}"></a> 
                                                                 <span  data-bind="if: isNew" class="badge badge-info">New</span>
                                                     </td>
-                                                    <td data-bind="text: Date">unbound</td>
-                                                    <td data-bind="text: Status">unbound</td>                         
+                                                    <td data-bind="text: Date"></td>
+                                                    <td data-bind="text: Status"></td>                         
                                                 </tr>
                                                          
                                             </tbody>
@@ -204,10 +204,10 @@
                                                 <tr>
                                                     <td>
                                                         <a href="notbound"
-                                                            data-bind="text: Description, attr: {href: correctedURL}">Unbound</a> 
+                                                            data-bind="text: Description, attr: {href: correctedURL}"></a> 
                                                     </td>
-                                                    <td data-bind="text: Modality">unbound</td>
-                                                    <td data-bind="text: Date">unbound</td>                         
+                                                    <td data-bind="text: Modality"></td>
+                                                    <td data-bind="text: Date"></td>                         
                                                 </tr>
                                                          
                                             </tbody>
@@ -215,11 +215,11 @@
                                     </div>
 
 
-                <div id="ajaxBusy"><p>
-                <!--
-                <img src="../../img/ajax-loader.gif" class="ajax-loader"></p>
-                    -->
-                </div>
+                                    <div id="ajaxBusy"><p>
+                                    
+                                        <img src="../../img/ajax-loader.gif" class="ajax-loader"></p>
+                                        
+                                    </div>
                 
                                     <div class="tab-pane" id="messages">
                                         <ul class="thumbnails">
