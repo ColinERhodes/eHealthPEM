@@ -3,7 +3,7 @@
 //
 
 // Globals.
-var baseURI = "https://referralapi-c9-colinrhodes.c9.io/api/";
+var baseURI = "http://pemrest.azurewebsites.net/api/";
 var builder = new ModelBuilder(baseURI);
 var theViewModel  = new ViewModel();
 
