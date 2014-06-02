@@ -26,6 +26,7 @@ function ModelBuilder(urlBase) {
         
             model.ClinicalDocuments = ko.utils.arrayMap(rd, function(item) {
                 return new ClinicalDocument(item.Description, item.Date, item.Status, item.URL, item.isNew);
+ 
             })
         })
        .error(function() { alert("An error occurred retrieving clinical data!"); });
@@ -36,6 +37,7 @@ function ModelBuilder(urlBase) {
             model.ImagingStudies = ko.utils.arrayMap(rd, function(item) {
                 return new ImagingStudy(item.Description, item.Date, item.Modality, item.URL);
             })
+   
         })
        .error(function() { alert("An error occurred retrieving imaging data!"); });
 
@@ -55,7 +57,6 @@ function ModelBuilder(urlBase) {
             model.User.Practice = user.Practice;
         })
        .error(function() { alert("An error occurred retrieving user data!"); });
-    
 
         return self.ViewModel;
     }
