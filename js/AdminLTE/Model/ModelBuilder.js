@@ -63,7 +63,7 @@ function ModelBuilder(urlBase) {
           async: sync,
           success: function(rd) {
             model.Appointments = ko.utils.arrayMap(rd, function(item) {
-                return new Appointment(item.Location, item.Date, item.Provider);
+                return new Appointment(item.Location, item.Date, item.Time, item.Provider);
             })
           }
         });
