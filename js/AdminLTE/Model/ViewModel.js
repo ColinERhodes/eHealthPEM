@@ -10,6 +10,7 @@ function ViewModel() {
     self.Patient = new Patient("", "", "", "");
     
     self.Messages =  new ko.observableArray([]);
+    self.Appointments = new ko.observableArray([]);
     
     self.NumberOfMessagesText = function()  {
         return "You have " + self.Messages.length + " messages";  

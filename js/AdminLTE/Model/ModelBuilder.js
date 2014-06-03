@@ -56,6 +56,18 @@ function ModelBuilder(urlBase) {
           }
         });
         
+        
+        $.ajax({
+          url: baseURI + "Customers/" + customer + "/Patients/" + patient + "/Appointments",
+          dataType: 'json',
+          async: sync,
+          success: function(rd) {
+            model.Appointments = ko.utils.arrayMap(rd, function(item) {
+                return new Appointment(item.Location, item.Date, item.Provider);
+            })
+          }
+        });
+        
         $.ajax({
           url: baseURI + "Users/" + userName,
           dataType: 'json',
@@ -65,6 +77,7 @@ function ModelBuilder(urlBase) {
             model.User.Practice = user.Practice;
           }
         });
+        
         
         return self.ViewModel;
     }

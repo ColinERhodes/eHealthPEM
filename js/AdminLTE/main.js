@@ -3,14 +3,16 @@
 //
 
 // Globals.
-var baseURI = "http://pemrest.azurewebsites.net/api/";
+var baseURI = "https://pemrest.azurewebsites.net/api/";
 var builder = new ModelBuilder(baseURI);
 var theViewModel  = new ViewModel();
 
 // Setup periodic call backs.
 function refreshUI(sync) { 
     builder.BuildUsingSearch(theViewModel, "Demo", "Rhodes", "user", sync);
-    setTimeout(function() { refreshUI(sync)} , 2 * 60 * 1000);
+    
+    // Always async after the first call
+//    setTimeout(function() { refreshUI(true)} , 2 * 60 * 1000);
 };
 
  // Document ready ...
