@@ -15,7 +15,7 @@ function ImagingStudy(description, date, modality, provider, URL,  iPADURL) {
         if((navigator.userAgent.match(/iPhone/i)) || 
             (navigator.userAgent.match(/iPad/i)) ||
             (navigator.userAgent.match(/Android/i))) {
-                 return self.iPadURL + " target='"'_blank'"'";
+                 return self.iPadURL + ' target="_blank"';
         } else {
             return self.URL;
         }
