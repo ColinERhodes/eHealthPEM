@@ -24,6 +24,8 @@ $(document).ready(function() {
     ko.applyBindings(theViewModel);
 
     refreshUI(false);
+    
+    self.SelectedItem = ko.observable(new Patient());
 
     var dtOptions = {
                     "bPaginate": false,

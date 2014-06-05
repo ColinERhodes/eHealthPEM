@@ -3410,3 +3410,9 @@ fieldset[disabled] .btn-vk.active {
   padding-left: 5px;
   padding-right: 5px;
 }
+
+.content {
+	padding: 0 0 0 35px; /* 75px being the width of the thumbnail + how much space you want to put between it and your text */
+	position: relative; /* So the thumbnail is relative to this */
+}
+

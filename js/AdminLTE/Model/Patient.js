@@ -7,6 +7,7 @@ function Patient(name, dob, gender, mrn) {
     self.DateOfBirth = dob;
     self.Gender = gender;
     self.MRN = mrn;
+    self.URL = "patientView.html?PatientName=" + escape(name);
     ko.track(self);
 
     return self;

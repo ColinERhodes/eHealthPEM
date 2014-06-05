@@ -12,6 +12,19 @@ function ModelBuilder(urlBase) {
     
         // Demographics
         $.ajax({
+          url: baseURI + "Customers/" + customer + "/Patients",
+          dataType: 'json',
+          async: sync,
+          
+          //name, dob, gender, mrn
+          success: function(data) {
+                 model.Patients = ko.utils.arrayMap(data, function(item) {
+                return new Patient(item.FullName, item.DOB, item.Gender, item.MRN);
+            })
+          }
+         });
+        
+        $.ajax({
           url: baseURI + "Customers/" + customer + "/Patients/" + patient,
           dataType: 'json',
           async: sync,
