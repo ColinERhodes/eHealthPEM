@@ -1,13 +1,14 @@
 //
 // An imaging study is a set of data + a link to the actual viewable study
 //
-function ImagingStudy(description, date, modality, URL,  iPADURL) {
+function ImagingStudy(description, date, modality, provider, URL,  iPADURL) {
     var self = this;
     self.Description =  description;
     self.Date = date;
     self.Modality = modality;
     self.URL = URL;
     self.iPadURL = iPADURL;
+    self.Provider = provider;
     
     self.correctedURL = ko.computed(function() {
         

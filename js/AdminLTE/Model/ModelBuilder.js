@@ -29,7 +29,7 @@ function ModelBuilder(urlBase) {
           async: sync,
           success: function(rd) {
              model.ClinicalDocuments = ko.utils.arrayMap(rd, function(item) {
-                return new ClinicalDocument(item.Description, item.Date, item.Status, item.URL, item.isNew);
+                return new ClinicalDocument(item.Description, item.Date, item.Provider, item.URL, item.isNew);
             })
           }
         });
@@ -40,7 +40,7 @@ function ModelBuilder(urlBase) {
           async: sync,
           success: function(rd) {
              model.ImagingStudies = ko.utils.arrayMap(rd, function(item) {
-                return new ImagingStudy(item.Description, item.Date, item.Modality, item.URL, item.iPADURL);
+                return new ImagingStudy(item.Description, item.Date, item.Modality, item.Provider, item.URL, item.iPADURL);
             })
           }
         });
